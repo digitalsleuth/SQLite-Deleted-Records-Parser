@@ -3,10 +3,10 @@ requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-exclude = ["debian*", "binaries*", "build*", "dist*"]
+exclude = ["debian*", "binaries*", "build*", "dist*", "archive*"]
 
 [project]
-name = "sqlite-parser"
+name = "sqlite-carver"
 version = "2.0.0"
 requires-python = ">=3.6"
 authors = [
@@ -15,10 +15,10 @@ authors = [
 maintainers = [
   {name = "Corey Forman (digitalsleuth)", email = "github@digitalsleuth.ca"}
 ]
-description = "Python 3 SQLite Deleted Records Parser"
+description = "Python 3 SQLite Carver to carve for deleted records from SQLite databases"
 readme = "README.md"
 license = {file = "LICENSE"}
-keywords = ["digital forensics", "dfir", "sqlite", "deleted", "parser"]
+keywords = ["digital forensics", "dfir", "sqlite", "deleted", "carver"]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Programming Language :: Python :: 3",
@@ -30,4 +30,4 @@ classifiers = [
 Homepage = "https://github.com/digitalsleuth/SQLite-Deleted-Records-Parser"
 
 [project.scripts]
-sqlite-parser = "sqlite_parser.sqlite_parser:main"
+sqlite-carver = "sqlitecarver.sqlitecarver:main"
